@@ -1,0 +1,8 @@
+﻿10/09/2022 09:46:22 - Started 'CreatePDF'
+10/09/2022 09:47:53 - Started 'CreatePDF'
+10/09/2022 09:51:57 - Started 'CreatePDF'
+10/09/2022 09:57:28 - Started 'CreatePDF'
+10/09/2022 09:58:14 - Started 'CreatePDF'
+10/09/2022 10:01:29 - Archivo procesado en: Data\Output\Tabla.pdf
+10/09/2022 10:02:35 - Started 'CreatePDF'
+10/09/2022 10:03:27 - Archivo procesado en: Data\Output\Tabla.pdf

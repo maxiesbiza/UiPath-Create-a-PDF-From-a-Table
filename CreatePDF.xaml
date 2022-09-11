@@ -1,0 +1,354 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Armando_Word" this:Sequence_Armando_Word.in_PathSoffice="C:\Program Files\LibreOffice\program\soffice.exe" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_PathSoffice" Type="InArgument(x:String)" />
+    <x:Property Name="in_dt_Input" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_Header" Type="InArgument(x:String)" />
+    <x:Property Name="in_PathLogo" Type="InArgument(x:String)" />
+    <x:Property Name="in_PathPDFfile" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Sequence_Armando_Word.in_Header>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Armando_Word.in_Header>
+  <this:Sequence_Armando_Word.in_PathLogo>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Armando_Word.in_PathLogo>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>954,3073</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_Armando_Word_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="49">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.PDF.Activities.PDF</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>ClosedXML.Excel</x:String>
+      <x:String>ClosedXML.Attributes</x:String>
+      <x:String>ClosedXML.Excel.CalcEngine</x:String>
+      <x:String>ClosedXML.Excel.CalcEngine.Functions</x:String>
+      <x:String>ClosedXML.Utils</x:String>
+      <x:String>ClosedXML</x:String>
+      <x:String>ClosedXML.Excel.Drawings</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="86">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>BalaReva.Excel</AssemblyReference>
+      <AssemblyReference>BalaReva.Excel.Base</AssemblyReference>
+      <AssemblyReference>BalaReva.Excel.Utilities</AssemblyReference>
+      <AssemblyReference>BalaReva.EasyExcel</AssemblyReference>
+      <AssemblyReference>BalaReva.EasyExcel.Utilities</AssemblyReference>
+      <AssemblyReference>GemBox.Spreadsheet</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>ClosedXML</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="A partir del template ‘Template.xlsx’ almacenado en la carpeta ‘Data’ del Proyecto, cargamos la tabla in_dt_Input junto con in_Header y luego convertimos el resultado final en PDF almacenandolo en ‘Data\Output\cities.pdf’." DisplayName="CreatePDF" sap:VirtualizedContainerService.HintSize="964,3008" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="NroPag" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="ExcelIndex" />
+      <Variable x:TypeArguments="x:String" Name="TableXLSX" />
+      <Variable x:TypeArguments="x:Boolean" Name="PathExist" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Log workflow - Start CreatePDF" sap:VirtualizedContainerService.HintSize="922,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Log\Log.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Message">Started 'CreatePDF'</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_LogFolder">Data\Temp</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:MultipleAssign DisplayName="Multiple Assign - Fecha PathPDF" sap:VirtualizedContainerService.HintSize="922,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[TableXLSX]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[Path.Combine(Path.GetFullPath("Data\Temp"), Path.GetFileNameWithoutExtension(in_PathPDFfile) + ".xlsx")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[TableXLSX]" DisplayName="Copy File - 'Template.xlsx'" sap:VirtualizedContainerService.HintSize="922,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="Data\Template.xlsx" />
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Escribe las fila de in_dt_Input en un template en excel que se convertirá en el pdf final." Condition="[in_dt_Input.RowCount &gt; 0]" DisplayName="While - DTGanadores tenga filas" sap:VirtualizedContainerService.HintSize="922,1794" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="886,1598" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="dt_Imprimir" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Assign - NroPag" sap:VirtualizedContainerService.HintSize="844,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[NroPag]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">[NroPag + 1]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <If sap2010:Annotation.AnnotationText="Si faltan por imprimir 40 filas o más entoces se imprimiran 40 filas sino se imprimirán las filas restantes." Condition="[in_dt_Input.RowCount &gt;= 40]" DisplayName="If - Filas &gt;= 40" sap:VirtualizedContainerService.HintSize="844,459" sap2010:WorkflowViewState.IdRef="If_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Sequence Filas &gt;= 40" sap:VirtualizedContainerService.HintSize="473,265" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MultipleAssign sap2010:Annotation.AnnotationText="Toma 40 filas de in_dt_Inputs, las pasa a DTImprimir y luego las elimina de in_dt_Input." DisplayName="Multiple Assign - Imprimir 40 filas" sap:VirtualizedContainerService.HintSize="431,173" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                  <ui:MultipleAssign.AssignOperations>
+                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="sd:DataTable">[dt_Imprimir]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="sd:DataTable">[in_dt_Input.AsEnumerable.Take(40).CopyToDataTable]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="sd:DataTable">[in_dt_Input]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="sd:DataTable">[in_dt_Input.AsEnumerable.Skip(40).CopyToDataTable]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                    </scg:List>
+                  </ui:MultipleAssign.AssignOperations>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:MultipleAssign>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Sequence - Filas &lt; 40" sap:VirtualizedContainerService.HintSize="326,271" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign DisplayName="Assign - DTImprimir Filas Restantes" sap:VirtualizedContainerService.HintSize="284,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="sd:DataTable">[dt_Imprimir]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="sd:DataTable">[in_dt_Input.AsEnumerable.Take(in_dt_Input.RowCount).CopyToDataTable]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:ClearDataTable DataTable="[in_dt_Input]" DisplayName="Clear Data Table - in_DTGanadores" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+              </Sequence>
+            </If.Else>
+          </If>
+          <If sap2010:Annotation.AnnotationText="Si ExcelIndex es 1 entonces es la primera vez que se ejecuta y debemos empezar a escribir en la celda 'A2', caso contrario escribimos en la celda que nos marca ExcelIndex." Condition="[ExcelIndex = 0]" DisplayName="If - ExcelIndex = 1" sap:VirtualizedContainerService.HintSize="844,907" sap2010:WorkflowViewState.IdRef="If_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Sequence - Si - ExcelIndex = 0" sap:VirtualizedContainerService.HintSize="376,708" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Es necesario que las separaciones del path sea con dos barras: &quot;\\&quot;." Code="var workbook = new XLWorkbook(in_ExcelPath);&#xD;&#xA;var ws = workbook.Worksheet(1);&#xD;&#xA;&#xD;&#xA;//Insert logo&#xD;&#xA;// var image =  ws.AddPicture(in_PathImage).MoveTo(ws.Cell(&quot;B2&quot;).Address);&#xD;&#xA;&#xD;&#xA;//Center header and merge cells&#xD;&#xA;ws.Cell(&quot;A2&quot;).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;&#xD;&#xA;ws.Cell(&quot;A2&quot;).Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;&#xD;&#xA;ws.Cell(&quot;A2&quot;).Style.Font.Bold = true;&#xD;&#xA;ws.Range(&quot;A2:G5&quot;).Merge();&#xD;&#xA;&#xD;&#xA;workbook.Save();" DisplayName="Invoke code - Preparar Hoja - Pag 1" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="InvokeCode_13" Language="CSharp">
+                  <ui:InvokeCode.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_ExcelPath">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TableXLSX.Replace(&quot;\&quot;,&quot;\\&quot;)" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_ExcelIndex">
+                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="ExcelIndex" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_RowCount">
+                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="dt_Imprimir.RowCount" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_PathImage">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Path.GetFullPath(in_PathLogo)" />
+                    </InArgument>
+                  </ui:InvokeCode.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeCode>
+                <ui:WriteCell Cell="A2" DisplayName="Write Cell - Encabeza Pag1" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Template" Text="[in_header]" WorkbookPath="[TableXLSX]" />
+                <ui:WriteRange AddHeaders="True" DataTable="[dt_Imprimir]" DisplayName="Write Range - DTImprimir Pag1" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Template" StartingCell="B6" WorkbookPath="[TableXLSX]" />
+                <Assign DisplayName="Assign - ExcelIndex + 1" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[ExcelIndex]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[ExcelIndex + 1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Sequence - No - ExcelIndex = 1" sap:VirtualizedContainerService.HintSize="376,708" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign DisplayName="Assign - ExcelIndex + 49" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[ExcelIndex]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[ExcelIndex + 49]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Es necesario que las separaciones del path sea con dos barras: &quot;\\&quot;." Code="var workbook = new XLWorkbook(in_ExcelPath);&#xD;&#xA;var ws = workbook.Worksheet(1);&#xD;&#xA;&#xD;&#xA;//Insert logo&#xD;&#xA;// var image =  ws.AddPicture(in_PathImage).MoveTo(ws.Cell(&quot;B&quot; + in_ExcelIndex.ToString()).Address);&#xD;&#xA;&#xD;&#xA;//Center header and merge cells&#xD;&#xA;ws.Cell(&quot;A&quot; + in_ExcelIndex.ToString()).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;&#xD;&#xA;ws.Cell(&quot;A&quot; + in_ExcelIndex.ToString()).Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;&#xD;&#xA;ws.Cell(&quot;A&quot; + in_ExcelIndex.ToString()).Style.Font.Bold = true;&#xD;&#xA;ws.Range(&quot;A&quot; + in_ExcelIndex.ToString() + &quot;:G&quot; + (in_ExcelIndex + 3).ToString()).Merge();&#xD;&#xA;&#xD;&#xA;//Combina las celdas del final de pagina&#xD;&#xA;ws.Range(string.Concat(&quot;A&quot;, in_ExcelIndex + 5 + in_RowCount, &quot;:G&quot;, in_ExcelIndex + 48)).Merge();&#xD;&#xA;&#xD;&#xA;workbook.Save();" DisplayName="Invoke code - Preparar Hoja" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="InvokeCode_12" Language="CSharp">
+                  <ui:InvokeCode.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_ExcelPath">[TableXLSX.Replace("\","\\")]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_ExcelIndex">[ExcelIndex]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_RowCount">[dt_Imprimir.RowCount]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_PathImage">[in_PathLogo]</InArgument>
+                  </ui:InvokeCode.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeCode>
+                <ui:WriteCell Cell="[String.Concat(&quot;A&quot;, ExcelIndex.ToString)]" DisplayName="Write Cell  - Encabezado" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Template" Text="[in_header]" WorkbookPath="[TableXLSX]" />
+                <ui:WriteRange AddHeaders="True" DataTable="[dt_Imprimir]" DisplayName="Write Range - DTImprimir" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Template" StartingCell="[String.Concat(&quot;B&quot;, ExcelIndex + 4)]" WorkbookPath="[TableXLSX]" />
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InterruptibleWhile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ConvertToPDF workflow" sap:VirtualizedContainerService.HintSize="922,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ConvertToPDF.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PathInputFile">[TableXLSX]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PathOutputFolder">[Path.GetDirectoryName(in_PathPDFfile)]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PathSoffice">[in_PathSoffice]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:PathExists Resource="{x:Null}" DisplayName="PDFGanadores Exists" Exists="[PathExist]" sap:VirtualizedContainerService.HintSize="922,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[in_PathPDFfile]" PathType="File" />
+    <If Condition="[PathExist]" DisplayName="If PDFGanadores Exist" sap:VirtualizedContainerService.HintSize="922,270" sap2010:WorkflowViewState.IdRef="If_5">
+      <If.Then>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Log workflow - PDF Procesado" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Log\Log.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="in_Message">["Archivo procesado en: " + in_PathPDFfile]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_LogFolder">Data\Temp</InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+      </If.Then>
+      <If.Else>
+        <Throw DisplayName="Throw PDF Ganadores error" Exception="[New Exception(in_PathPDFfile + &quot; no se generó correctamente.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
